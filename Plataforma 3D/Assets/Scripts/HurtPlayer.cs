@@ -25,6 +25,13 @@ public class HurtPlayer : MonoBehaviour
             hitDirection = hitDirection.normalized;
 
             FindObjectOfType<HealthManager>().HurtPlayer(damageToGive, hitDirection);
+        }else if(collision.gameObject.CompareTag("Player") && gameObject.tag == "bullet")
+        {
+            Vector3 hitDirection = collision.transform.position - transform.position;
+
+            hitDirection = hitDirection.normalized;
+            Destroy(gameObject);
         }
+
     }
 }

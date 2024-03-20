@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform targetObject;
-
+    [SerializeField] private Transform targetObject;
+    //[SerializeField] private Transform startPosition;
     public Vector3 cameraOffset;
     
     
     // Start is called before the first frame update
     void Start()
     {
+
         cameraOffset = transform.position - targetObject.transform.position;
     }
 
