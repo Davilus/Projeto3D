@@ -49,7 +49,7 @@ public class ProjectiltLaunch : MonoBehaviour
             versor = (target.transform.position - projectPos.transform.position);
             versor.Normalize();
             bulletRig.AddForce(versor * bulletSpeed);
-            Destroy(bullet, 50f);
+            Destroy(bullet, 2f);
 
         }
         

@@ -26,8 +26,11 @@ public class HurtPlayer : MonoBehaviour
 
             FindObjectOfType<HealthManager>().HurtPlayer(damageToGive, hitDirection);
 
-           
-            Destroy(gameObject);
+           if(gameObject.tag == "Bullet")
+            {
+                Destroy(gameObject);
+            }
+            
             
 
         }

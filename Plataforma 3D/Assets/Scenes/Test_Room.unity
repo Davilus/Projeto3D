@@ -957,7 +957,7 @@ MonoBehaviour:
   projectPos: {fileID: 920817659}
   target: {fileID: 318681058}
   enemyBullet: {fileID: 8626176634468543861, guid: 903d4764ac33bd641b6277f5132d5425, type: 3}
-  bulletSpeed: 200
+  bulletSpeed: 1000
 --- !u!1 &1202557432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,10 +2752,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8ca5a0f00303b8b4690e334d0b4d51d2, type: 2}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
