@@ -41,9 +41,10 @@ public class QuebrarBloco : MonoBehaviour
     }
     private IEnumerator FadeOutRigidBodies(Rigidbody[] rigidbodies)
     {
+        Destroy(gameObject);
         WaitForSeconds espera = new WaitForSeconds(pieceSleepCheckDelay);
         int ridibodysAtivos = rigidbodies.Length;
-
+       
         while (ridibodysAtivos > 0)
         {
             yield return espera;
@@ -84,7 +85,7 @@ public class QuebrarBloco : MonoBehaviour
                 Destroy(renderer.gameObject);
             }
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
     private Renderer GetRendererFromRigidboody(Rigidbody rigidbodies)
     {
