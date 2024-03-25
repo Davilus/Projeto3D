@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuebrarBloco : MonoBehaviour
+public class QuebrarBloco : MonoBehaviour //, IInterface
 {
     private Rigidbody rb;
     
@@ -92,22 +92,22 @@ public class QuebrarBloco : MonoBehaviour
         return rigidbodies.GetComponent<Renderer>();
     }
 
+    public string InterfacePrompt { get; }
+    //public bool Interact(Interactor interactor)
+    //{
+    //    Explosion();
+       
+    //    return true;
+    //}
 
-    void Quebrar()
-    {
-        Instantiate(blocoQuebrado, transform.position, transform.rotation);
-        Destroy(gameObject);
 
-    }
-
-    
     // Update is called once per frame
     void Update()
     {
-        
-        if(Input.GetKeyDown(KeyCode.E))
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            //Quebrar();
+
             Explosion();
         }
 
