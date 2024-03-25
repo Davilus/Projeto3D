@@ -11,7 +11,7 @@ interface Interagivel
 public class Interagir : MonoBehaviour
 {
     public Transform fonteDaInteracao;
-    public float alcanceDaInteracao = 1;
+    public float alcanceDaInteracao = 3;
     // Update is called once per frame
     void Update()
     {
@@ -29,9 +29,9 @@ public class Interagir : MonoBehaviour
         
     }
 
-    //private void AreadeInteracao() // Metodo errado :(
-    //{
-    //    Gizmos.color = Color.blue;
-    //    Gizmos.DrawWireSphere(fonteDaInteracao.position, alcanceDaInteracao);  
-    //}
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(fonteDaInteracao.position, alcanceDaInteracao);
+    }
 }

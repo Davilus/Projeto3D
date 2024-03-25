@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuebrarBloco : MonoBehaviour //, IInterface
+public class QuebrarBloco : MonoBehaviour 
 {
     private Rigidbody rb;
     
@@ -36,12 +36,12 @@ public class QuebrarBloco : MonoBehaviour //, IInterface
             }
             body.AddExplosionForce(exploxiveForce, transform.position, exploxciveRadius);
         }
-
+        //Destroy(gameObject);
         StartCoroutine(FadeOutRigidBodies(rigidbodies));
     }
     private IEnumerator FadeOutRigidBodies(Rigidbody[] rigidbodies)
     {
-        Destroy(gameObject);
+        Destroy(gameObject); // peças não se desfazem se o objeto for destruido aqui
         WaitForSeconds espera = new WaitForSeconds(pieceSleepCheckDelay);
         int ridibodysAtivos = rigidbodies.Length;
        
@@ -79,8 +79,8 @@ public class QuebrarBloco : MonoBehaviour //, IInterface
             yield return null;
 
         }
-
-        foreach(Renderer renderer in renderers)
+        
+        foreach (Renderer renderer in renderers)
             {
                 Destroy(renderer.gameObject);
             }
@@ -92,15 +92,7 @@ public class QuebrarBloco : MonoBehaviour //, IInterface
         return rigidbodies.GetComponent<Renderer>();
     }
 
-    public string InterfacePrompt { get; }
-    //public bool Interact(Interactor interactor)
-    //{
-    //    Explosion();
-       
-    //    return true;
-    //}
-
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -113,4 +105,6 @@ public class QuebrarBloco : MonoBehaviour //, IInterface
 
 
     }
+
+
 }
