@@ -19,14 +19,25 @@ public class Empurrar : MonoBehaviour, Interagivel
         //transform.position = Vector3.SmoothDamp(transform.position, alvo, ref currentVelocity, smoothTime);
 
 
-        Rigidbody body = GetComponent<Rigidbody>();
-        if (body != null)
-        {
-            Vector3 direcaoForca = body.position - player.position;
-            direcaoForca.y = 0;
-            direcaoForca.Normalize();
+        //Rigidbody body = GetComponent<Rigidbody>();
+        //if (body != null)
+        //{
+        //    Vector3 direcaoForca = body.position - player.position;
+        //    direcaoForca.y = 0;
+        //    direcaoForca.Normalize();
 
-            body.AddForceAtPosition(direcaoForca * Magnitude, player.position, ForceMode.Impulse);
-        }
+        //    body.AddForceAtPosition(direcaoForca * Magnitude, player.position, ForceMode.Impulse);
+        //}
     }
+    void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.F)) 
+        {
+            transform.Translate(3, 0, 0);
+        }
+        
+    }
+
+
 }

@@ -32,9 +32,9 @@ public class Interactor : MonoBehaviour
         //}
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(PontodeInteracao.position, AlcancedeInteracao);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(PontodeInteracao.position, AlcancedeInteracao);
+    //}
 }
