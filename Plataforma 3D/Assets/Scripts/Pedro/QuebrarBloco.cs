@@ -14,6 +14,9 @@ public class QuebrarBloco : MonoBehaviour
     [SerializeField] private float pieceDestroyDelay = 5f;
     [SerializeField] private float pieceSleepCheckDelay = 0.5f;
 
+    [SerializeField] private int caixaVida = 1;
+    [SerializeField] private int danoSofrido = 1;
+
     public void Explosion()
     {
         if(TryGetComponent<Collider>(out Collider collider))
@@ -41,7 +44,7 @@ public class QuebrarBloco : MonoBehaviour
     }
     private IEnumerator FadeOutRigidBodies(Rigidbody[] rigidbodies)
     {
-        Destroy(gameObject); // peças não se desfazem se o objeto for destruido aqui
+        gameObject.layer = LayerMask.NameToLayer("PréDestruição");
         WaitForSeconds espera = new WaitForSeconds(pieceSleepCheckDelay);
         int ridibodysAtivos = rigidbodies.Length;
        
@@ -81,28 +84,33 @@ public class QuebrarBloco : MonoBehaviour
         }
         
         foreach (Renderer renderer in renderers)
-            {
-                Destroy(renderer.gameObject);
-            }
+        {
+            Destroy(renderer.gameObject);
+        }
 
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
     private Renderer GetRendererFromRigidboody(Rigidbody rigidbodies)
     {
         return rigidbodies.GetComponent<Renderer>();
     }
 
-    
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.CompareTag("Gun"))
+        {
+            caixaVida -= danoSofrido;
+            if (caixaVida < 0)
+            {
+                Explosion();
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-
-            Explosion();
-        }
-
 
     }
 

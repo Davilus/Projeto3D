@@ -16,6 +16,11 @@ public class EnemyHealth : MonoBehaviour
         if (collider.gameObject.CompareTag("Gun"))
         {
             enemyHealth -= damage;
+            if(enemyHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+                
         }
     }
 }
