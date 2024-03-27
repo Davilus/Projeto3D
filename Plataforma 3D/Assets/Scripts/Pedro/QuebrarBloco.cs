@@ -14,6 +14,8 @@ public class QuebrarBloco : MonoBehaviour
     [SerializeField] private float pieceDestroyDelay = 5f;
     [SerializeField] private float pieceSleepCheckDelay = 0.5f;
 
+    [SerializeField] private bool caixaEmpilhada = false;
+
     [SerializeField] private int caixaVida = 1;
     [SerializeField] private int danoSofrido = 1;
 
@@ -39,12 +41,20 @@ public class QuebrarBloco : MonoBehaviour
             }
             body.AddExplosionForce(exploxiveForce, transform.position, exploxciveRadius);
         }
-        //Destroy(gameObject);
         StartCoroutine(FadeOutRigidBodies(rigidbodies));
     }
     private IEnumerator FadeOutRigidBodies(Rigidbody[] rigidbodies)
     {
-        gameObject.layer = LayerMask.NameToLayer("PréDestruição");
+        
+        if(caixaEmpilhada == false)
+        {
+            gameObject.layer = LayerMask.NameToLayer("PréDestruição");
+        }
+        else
+        {
+            gameObject.layer = LayerMask.NameToLayer("PréDestruição_Pilha");
+        }
+        
         WaitForSeconds espera = new WaitForSeconds(pieceSleepCheckDelay);
         int ridibodysAtivos = rigidbodies.Length;
        
