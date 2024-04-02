@@ -246,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &156613895
 Transform:
   m_ObjectHideFlags: 0
@@ -1706,7 +1706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71dd2cfe9cf77647ac4611429496ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0.5
+  timer: 2
   projectPos: {fileID: 920817659}
   target: {fileID: 318681058}
   enemyBullet: {fileID: 8626176634468543861, guid: 903d4764ac33bd641b6277f5132d5425, type: 3}
@@ -2376,8 +2376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocoQuebrado: {fileID: 9157444469832167878, guid: e3191f6b7cbef36408b9d68d0ea1a05d, type: 3}
-  exploxiveForce: 500
-  exploxciveRadius: 1.5
+  exploxiveForce: 1000
+  exploxciveRadius: 2
   pieceFadeSpeed: 1
   pieceDestroyDelay: 2
   pieceSleepCheckDelay: 0.5
@@ -2593,8 +2593,8 @@ Transform:
   m_GameObject: {fileID: 1376055723}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.17, z: 0}
+  m_LocalScale: {x: 1, y: 0.687, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 920817659}
@@ -3069,12 +3069,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8ce2c32b1c90a42a3a6ec47597aa61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitudeX: 1
-  amplitudeY: 1
-  amplitudeZ: 1
-  frequenciaX: 3
-  frequenciaY: 1.5
-  frequenciaZ: 0.5
+  amplitudeX: 0.8
+  amplitudeY: 0.5
+  amplitudeZ: 0.8
+  frequenciaX: 1
+  frequenciaY: 3
+  frequenciaZ: 1
 --- !u!1 &1447571284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,7 +3334,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
@@ -3597,7 +3597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1757062317
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4425,6 +4425,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 359959932393004125, guid: b33395231e3a4d04498aa975f76b418d, type: 3}
+      propertyPath: attackingLength
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1402815553019614630, guid: b33395231e3a4d04498aa975f76b418d, type: 3}
       propertyPath: m_Name
       value: Player

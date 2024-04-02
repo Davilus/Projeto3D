@@ -8,9 +8,9 @@ public class PrismaBehavior : MonoBehaviour
      private float y;
      private float z;
 
-    [SerializeField] private int amplitudeX;
-    [SerializeField] private int amplitudeY;
-    [SerializeField] private int amplitudeZ;
+    [SerializeField] private float amplitudeX;
+    [SerializeField] private float amplitudeY;
+    [SerializeField] private float amplitudeZ;
 
     [SerializeField] private float frequenciaX;
     [SerializeField] private float frequenciaY;
