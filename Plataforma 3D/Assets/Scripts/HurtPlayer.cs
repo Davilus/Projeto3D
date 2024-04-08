@@ -6,16 +6,6 @@ public class HurtPlayer : MonoBehaviour
 {
     public int damageToGive = 1;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -30,8 +20,7 @@ public class HurtPlayer : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            
-            
+                       
 
         }
 
