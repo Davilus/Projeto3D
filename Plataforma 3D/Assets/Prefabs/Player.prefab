@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7102468117316165573}
   - component: {fileID: 2118077133211559314}
   - component: {fileID: 5890930425996243720}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   attacking: 0
   hitBox: {fileID: 3480144749101905910}
   attackingCounter: 0
-  attackingLength: 1
+  attackingLength: 0.25
 --- !u!114 &9214833895697439426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,9 +290,9 @@ GameObject:
   - component: {fileID: 729269440528458563}
   - component: {fileID: 2247802253015961129}
   - component: {fileID: 2098857715538378276}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,7 +377,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6742301855461107319}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "\xC1reaInterag\xEDvel"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 555840565304139329}
   - component: {fileID: 3480712423492933372}
   - component: {fileID: 6728751524489824423}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 7656128364131039525}
   - component: {fileID: 4104640214889211139}
   - component: {fileID: 6461075836254473148}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

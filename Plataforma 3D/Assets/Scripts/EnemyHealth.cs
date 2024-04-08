@@ -21,6 +21,9 @@ public class EnemyHealth : MonoBehaviour
                 Destroy(gameObject);
             }
                 
+        }else if (collider.gameObject.CompareTag("Zona de Morte"))
+        {
+            Destroy(gameObject);
         }
     }
 }

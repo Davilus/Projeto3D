@@ -114,6 +114,7 @@ public class QuebrarBloco : MonoBehaviour
             if (caixaVida < 0)
             {
                 Explosion();
+                caixaVida = 100;
             }
         }
     }
