@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HealthManager : MonoBehaviour
@@ -106,7 +107,16 @@ public class HealthManager : MonoBehaviour
 
         flashCounter = flashLength;
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Zona de Morte"))
+        {
+            Respawn();
+            Debug.Log("Colidiu");
+        }
+    }
+    
+    
     public void HealPlayer(int healAmount)
     {
         currentHealth += healAmount;

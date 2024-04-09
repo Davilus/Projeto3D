@@ -13,15 +13,13 @@ public class HurtPlayer : MonoBehaviour
             Vector3 hitDirection = collision.transform.position - transform.position;
 
             hitDirection = hitDirection.normalized;
-
+            //Debug.Log("Colidiu");
             FindObjectOfType<HealthManager>().HurtPlayer(damageToGive, hitDirection);
 
            if(gameObject.tag == "Bullet")
-            {
+           {
                 Destroy(gameObject);
-            }
-                       
-
+           }
         }
 
     }

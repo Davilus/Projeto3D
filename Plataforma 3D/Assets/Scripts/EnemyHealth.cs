@@ -10,6 +10,18 @@ public class EnemyHealth : MonoBehaviour
     public void HurtEnemy()
     {
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Gun")
+        {
+            enemyHealth -= damage;
+            if (enemyHealth <= 0)
+            {
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -23,7 +35,10 @@ public class EnemyHealth : MonoBehaviour
                 
         }else if (collider.gameObject.CompareTag("Zona de Morte"))
         {
+            enemyHealth -= damage;
             Destroy(gameObject);
         }
+
+        
     }
 }

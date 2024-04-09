@@ -7,10 +7,20 @@ public class NavMeshFollow : MonoBehaviour
 {
     public NavMeshAgent enemy;
     public Transform player;
+    [SerializeField] private BoxCollider cool;
+    private bool perseguir = false;
 
-    // Update is called once per frame
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+           perseguir=true;
+        }
+    }
     void Update()
     {
-        enemy.SetDestination(player.position);
+
+        if(perseguir)
+            enemy.SetDestination(player.position);
     }
 }

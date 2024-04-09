@@ -111,10 +111,10 @@ public class QuebrarBloco : MonoBehaviour
         if (collider.gameObject.CompareTag("Gun"))
         {
             caixaVida -= danoSofrido;
-            if (caixaVida < 0)
+            if (caixaVida == 0)
             {
                 Explosion();
-                caixaVida = 100;
+                //caixaVida = 100;
             }
         }
     }
