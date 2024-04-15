@@ -22,7 +22,8 @@ public class SpawnPlataformas : MonoBehaviour
         //Spawnar();
         if (destruido == true && inimigo.gameObject == null)
         {
-            Instantiate(plataforma, gameObject.transform);
+            plataforma.SetActive(true);
+            //Instantiate(plataforma, gameObject.transform);
             destruido=false;
         }
     }
