@@ -1758,7 +1758,7 @@ Transform:
   m_GameObject: {fileID: 1316190342}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.15, y: 1.46, z: 0}
+  m_LocalPosition: {x: 12.25, y: 2.73, z: 3.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1779,6 +1779,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inimigo: {fileID: 1225761126}
   plataforma: {fileID: 986616679}
+  speed: 3
+  smoothTime: 0.5
+  diferenca: {x: 0, y: 2, z: 0}
 --- !u!1 &1447571284
 GameObject:
   m_ObjectHideFlags: 0
