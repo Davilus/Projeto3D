@@ -8,6 +8,7 @@ using UnityEngine.AI;
 public class ProjectiltLaunch : MonoBehaviour
 {
     [SerializeField] private float timer = 5f;
+    [SerializeField] private float timeDestruction = 2f;
     private float fireRate;
     [SerializeField] private Transform projectPos;
     [SerializeField] private Transform target;
@@ -49,7 +50,7 @@ public class ProjectiltLaunch : MonoBehaviour
             versor = (target.transform.position - projectPos.transform.position);
             versor.Normalize();
             bulletRig.AddForce(versor * bulletSpeed);
-            Destroy(bullet, 2f);
+            Destroy(bullet, timeDestruction);
 
         }
         
