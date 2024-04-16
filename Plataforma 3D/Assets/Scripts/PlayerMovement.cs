@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float knockbackTime;
     private float knockbackCounter;
 
+    //Coyote Time
+    [SerializeField] private float coyoteTime = 0.25f;
+    [SerializeField] private float coyoteTimeCounter;
 
     private void Awake()
     {
@@ -37,6 +40,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //if (IsGrounded())
+        //{
+        //    coyoteTimeCounter = coyoteTime;
+        //}
+        //else
+        //{
+        //    coyoteTimeCounter -= Time.deltaTime;
+        //}
         ApplyGravity();
         ApplyRotation();
         ApplyMovement();
@@ -44,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ApplyGravity()
     {
+        
         if (IsGrounded() && velocity < 0f)
         {
             velocity = -1f;
@@ -79,7 +91,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!context.started) return;
         if (!IsGrounded()) return;
-
+        
+        
         velocity += jumpPower;
     }
 
