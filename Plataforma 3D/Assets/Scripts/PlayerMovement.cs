@@ -33,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.25f;
     [SerializeField] private float coyoteTimeCounter;
 
+    //Jump Buffer
+    private float jumpBufferTime = 0.2f;
+    private float jumpBufferCounter;
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -40,14 +44,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //if (IsGrounded())
-        //{
-        //    coyoteTimeCounter = coyoteTime;
-        //}
-        //else
-        //{
-        //    coyoteTimeCounter -= Time.deltaTime;
-        //}
+        if (IsGrounded())
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
         ApplyGravity();
         ApplyRotation();
         ApplyMovement();
@@ -90,10 +94,11 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (!context.started) return;
-        if (!IsGrounded()) return;
+        if (!IsGrounded() && coyoteTimeCounter < 0) return;
         
         
         velocity += jumpPower;
+        coyoteTimeCounter = 0f;
     }
 
     public bool IsGrounded() => characterController.isGrounded;
