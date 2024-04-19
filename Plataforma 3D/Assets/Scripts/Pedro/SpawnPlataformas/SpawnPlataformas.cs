@@ -37,11 +37,11 @@ public class SpawnPlataformas : MonoBehaviour
             transform.position = Vector3.SmoothDamp(transform.localPosition, alvo, ref currentVCelocity, smoothTime);
     }
 
-    private void Spawnar()
-    {
-        if(inimigo.gameObject == null) 
-        {   
-            destruido = true;
-        }
-    }
+    //private void Spawnar()
+    //{
+    //    if(inimigo.gameObject == null) 
+    //    {   
+    //        destruido = true;
+    //    }
+    //}
 }
