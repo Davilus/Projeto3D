@@ -44,8 +44,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (IsGrounded())
+        if (IsGrounded() && velocity < 0f)
         {
+
             coyoteTimeCounter = coyoteTime;
         }
         else
