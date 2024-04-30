@@ -30,6 +30,6 @@ public class PlayerAttack : MonoBehaviour
         attackingCounter = attackingLength;
         hitBox.SetActive(true);
         attacking = true;
-        Debug.Log("Attack");
+        
     }
 }
