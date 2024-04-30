@@ -6365,6 +6365,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 662148174625318433, guid: 2d6878d81f34b8e4990628f1beea8d81, type: 3}
+      propertyPath: m_Size.x
+      value: 118.40137
+      objectReference: {fileID: 0}
+    - target: {fileID: 662148174625318433, guid: 2d6878d81f34b8e4990628f1beea8d81, type: 3}
+      propertyPath: m_Size.z
+      value: 39.999977
+      objectReference: {fileID: 0}
+    - target: {fileID: 662148174625318433, guid: 2d6878d81f34b8e4990628f1beea8d81, type: 3}
+      propertyPath: m_Center.x
+      value: 9.200826
+      objectReference: {fileID: 0}
     - target: {fileID: 2164445048498713634, guid: 2d6878d81f34b8e4990628f1beea8d81, type: 3}
       propertyPath: m_Name
       value: Zona de morte

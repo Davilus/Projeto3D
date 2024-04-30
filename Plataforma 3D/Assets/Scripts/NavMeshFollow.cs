@@ -5,10 +5,17 @@ using UnityEngine.AI;
 
 public class NavMeshFollow : MonoBehaviour
 {
+    //private Animator slime;
     public NavMeshAgent enemy;
     public Transform player;
     [SerializeField] private BoxCollider cool;
     private bool perseguir = false;
+    //public bool andando;
+
+    private void Start()
+    {
+        //slime = GetComponent<Animator>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,7 +27,10 @@ public class NavMeshFollow : MonoBehaviour
     void Update()
     {
 
-        if(perseguir)
+        if (perseguir)
+        {
+            //slime.SetBool("Andando", andando);
             enemy.SetDestination(player.position);
+        }
     }
 }
