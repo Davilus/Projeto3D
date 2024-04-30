@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b9add0ab2446046bcbe63411a5910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slime: {fileID: 1835253837}
   enemy: {fileID: 851905967}
   player: {fileID: 627658106}
   cool: {fileID: 145294702}
@@ -976,6 +977,11 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
+--- !u!95 &616951840 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1598812614330545793, guid: f488d23c66681724b9d178f1d7646024, type: 3}
+  m_PrefabInstance: {fileID: 851905966}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &627658105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1427,7 +1433,6 @@ GameObject:
   - component: {fileID: 1079190862}
   - component: {fileID: 1079190861}
   - component: {fileID: 1079190863}
-  - component: {fileID: 1079190864}
   m_Layer: 12
   m_Name: GameObject
   m_TagString: Untagged
@@ -1483,30 +1488,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b9add0ab2446046bcbe63411a5910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slime: {fileID: 1652414753}
   enemy: {fileID: 8393954632171280168}
   player: {fileID: 627658106}
   cool: {fileID: 1079190861}
---- !u!95 &1079190864
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079190860}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2e6be17a88ba1244bb8f384b21d0774d, type: 3}
-  m_Controller: {fileID: 9100000, guid: e4462547cdac3f04792a3bd7a6815598, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1475063117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1612,6 +1597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b9add0ab2446046bcbe63411a5910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slime: {fileID: 616951840}
   enemy: {fileID: 1475063118}
   player: {fileID: 627658106}
   cool: {fileID: 1600800035}
@@ -1651,6 +1637,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1652414753 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7715320348109891497, guid: 185cc9223684af24f8746d1db7cdc289, type: 3}
+  m_PrefabInstance: {fileID: 8980364581598250137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1835253837 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1598812614330545793, guid: f488d23c66681724b9d178f1d7646024, type: 3}
+  m_PrefabInstance: {fileID: 1475063117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1844239671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,6 +2355,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5886083513787551567, guid: 185cc9223684af24f8746d1db7cdc289, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 2e6be17a88ba1244bb8f384b21d0774d, type: 3}
+    - target: {fileID: 5886083513787551567, guid: 185cc9223684af24f8746d1db7cdc289, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6066847107925281040, guid: 185cc9223684af24f8746d1db7cdc289, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
@@ -2411,8 +2415,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 5886083513787551567, guid: 185cc9223684af24f8746d1db7cdc289, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 8515711504609631072, guid: 185cc9223684af24f8746d1db7cdc289, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 185cc9223684af24f8746d1db7cdc289, type: 3}

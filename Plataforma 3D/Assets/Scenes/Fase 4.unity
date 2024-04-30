@@ -4502,6 +4502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b9add0ab2446046bcbe63411a5910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slime: {fileID: 1489989771}
   enemy: {fileID: 1575369786}
   player: {fileID: 1517338179}
   cool: {fileID: 1389919903}
@@ -4517,9 +4518,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b9add0ab2446046bcbe63411a5910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slime: {fileID: 1408874518}
   enemy: {fileID: 1960985186}
   player: {fileID: 1517338179}
   cool: {fileID: 1389919903}
+--- !u!95 &1408874518 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1598812614330545793, guid: f488d23c66681724b9d178f1d7646024, type: 3}
+  m_PrefabInstance: {fileID: 1575369785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1412231248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4751,6 +4758,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7114239453218971677, guid: 44837e4b86fc6604e8fc84562524d75d, type: 3}
   m_PrefabInstance: {fileID: 187204016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1489989771 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1598812614330545793, guid: f488d23c66681724b9d178f1d7646024, type: 3}
+  m_PrefabInstance: {fileID: 1960985185}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1516560404
 PrefabInstance:
