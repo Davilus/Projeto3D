@@ -384,11 +384,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1621967632}
   m_SourcePrefab: {fileID: 100100000, guid: a5e103c8116437d4e89389efef4aa7fe, type: 3}
---- !u!4 &318681058 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7481969652211505528, guid: b33395231e3a4d04498aa975f76b418d, type: 3}
-  m_PrefabInstance: {fileID: 3561973368804938050}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &318681068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +402,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   _encontrados: 0
+--- !u!4 &318681077 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7481969652211505528, guid: b33395231e3a4d04498aa975f76b418d, type: 3}
+  m_PrefabInstance: {fileID: 3561973368804938050}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &462932045
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4aab0fdcc1c04141ae82db974e29019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 318681058}
+  targetObject: {fileID: 318681077}
   cameraOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &502604630
 MonoBehaviour:
@@ -3467,7 +3467,7 @@ PrefabInstance:
     - target: {fileID: 8919450319317414709, guid: 23b81da7ba015c04490350adfa598192, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 318681058}
+      objectReference: {fileID: 318681077}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3506,7 +3506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3480144749101905910, guid: b33395231e3a4d04498aa975f76b418d, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3480144749101905910, guid: b33395231e3a4d04498aa975f76b418d, type: 3}
       propertyPath: m_TagString

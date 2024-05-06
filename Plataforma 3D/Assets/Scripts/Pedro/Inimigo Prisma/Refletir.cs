@@ -12,7 +12,7 @@ public class Refletir : MonoBehaviour
             refletir.velocity = -refletir.velocity;
             gameObject.tag = "Gun";
             gameObject.layer = 11;
-            //gameObject.sphe
+            
             
         }
     }
