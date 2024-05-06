@@ -6,7 +6,8 @@ using UnityEngine;
 public class QuebrarBloco : MonoBehaviour 
 {
     private Rigidbody rb;
-    
+    //[SerializeField] BoxCollider boxCollider;
+
     [SerializeField] private GameObject blocoQuebrado;
     [SerializeField] private float exploxiveForce = 1000f;
     [SerializeField] private float exploxciveRadius = 2f;
@@ -108,13 +109,14 @@ public class QuebrarBloco : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+       
         if (collider.gameObject.CompareTag("Gun"))
         {
             caixaVida -= danoSofrido;
             if (caixaVida == 0)
             {
                 Explosion();
-                //caixaVida = 100;
+                
             }
         }
     }
