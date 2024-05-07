@@ -4731,6 +4731,59 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &785353629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785353631}
+  - component: {fileID: 785353630}
+  m_Layer: 13
+  m_Name: "Parede Invis\xEDvel (1)"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &785353630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785353629}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.8053856, z: 1}
+  m_Center: {x: 0, y: 0.90269184, z: 0}
+--- !u!4 &785353631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785353629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 43.96, y: 4.07, z: 8.11}
+  m_LocalScale: {x: 66, y: 6, z: 4}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &791105861
 Mesh:
   m_ObjectHideFlags: 0
@@ -6688,7 +6741,7 @@ Transform:
   m_GameObject: {fileID: 1127951521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.23, y: 4.07, z: -10.26}
+  m_LocalPosition: {x: 43.96, y: 4.07, z: -10.26}
   m_LocalScale: {x: 66, y: 6, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11453,5 +11506,6 @@ SceneRoots:
   - {fileID: 1561951866}
   - {fileID: 1363074802}
   - {fileID: 1127951523}
+  - {fileID: 785353631}
   - {fileID: 1051190021}
   - {fileID: 1881323234}

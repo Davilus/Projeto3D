@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPontodePressaoPlayer : MonoBehaviour
 {
-    [SerializeField] GameObject plataforma;
+    [SerializeField] GameObject gameObject;
     private bool spawnou = false;
     private bool primeiroSpawn = true;
     [SerializeField] private BoxCollider col;
@@ -29,7 +29,7 @@ public class SpawnPontodePressaoPlayer : MonoBehaviour
     {
         if (spawnou && primeiroSpawn) 
         {
-            plataforma.SetActive(true);
+            gameObject.SetActive(true);
         }
     }
 }
