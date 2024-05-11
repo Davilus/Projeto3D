@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18015099, g: 0.22555454, b: 0.30684263, a: 1}
+  m_IndirectSpecularColor: {r: 0.18015079, g: 0.22555429, b: 0.30684203, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1766,6 +1766,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2331501829881423548, guid: fbe7be5f2ffe1414eb6e95f1547b2182, type: 3}
   m_PrefabInstance: {fileID: 712255978}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &790169186
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.55
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000019073486
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_Name
+      value: Mimimir_Apenultima_Exportacao
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1801693825}
+  m_SourcePrefab: {fileID: 100100000, guid: fe1559dd435a9884383b6844ce349627, type: 3}
 --- !u!4 &947500461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6742301855461107319, guid: b33395231e3a4d04498aa975f76b418d, type: 3}
@@ -2779,6 +2839,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1623131817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1801693824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+  m_PrefabInstance: {fileID: 790169186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1801693825
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801693824}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 89f54726f31d0864f855085eea1e37d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1860780774
 GameObject:
   m_ObjectHideFlags: 0
@@ -3860,3 +3946,4 @@ SceneRoots:
   - {fileID: 206670346}
   - {fileID: 4643424710451490031}
   - {fileID: 1171221580}
+  - {fileID: 790169186}
