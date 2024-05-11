@@ -8,6 +8,9 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController characterController;
+    public Animator anim;
+
+    private bool andando;
 
     //Movimentação do personagem
     private Vector2 input;
@@ -40,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -84,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
     public void ApplyMovement()
     {
         characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
+        anim.SetBool("Andando", andando);
     }
 
     public void Move(InputAction.CallbackContext context)
