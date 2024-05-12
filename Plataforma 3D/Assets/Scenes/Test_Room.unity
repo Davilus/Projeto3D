@@ -1814,6 +1814,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -811903323215000686, guid: fe1559dd435a9884383b6844ce349627, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e5fd8db1152f3d54a8ad8eb5204d990e, type: 2}
     - target: {fileID: 919132149155446097, guid: fe1559dd435a9884383b6844ce349627, type: 3}
       propertyPath: m_Name
       value: Mimimir_Apenultima_Exportacao
