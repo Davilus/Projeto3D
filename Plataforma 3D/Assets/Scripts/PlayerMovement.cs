@@ -10,7 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController characterController;
     public Animator anim;
 
-    private bool andando;
+    private bool andando = false;
+    private bool pulando = false;
 
     //Movimentação do personagem
     private Vector2 input;
@@ -43,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -57,6 +57,19 @@ public class PlayerMovement : MonoBehaviour
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
+
+        if(velocity > -1f)
+        {
+            anim.SetBool("Pulando", pulando = true);
+            anim.SetBool("Andar", andando = false);
+        }
+
+        else if (input.x == 0 && input.y == 0)
+        {
+            anim.SetBool("Andar", andando = false);
+            anim.SetBool("Pulando", pulando = false);
+        }
+
         ApplyGravity();
         ApplyRotation();
         ApplyMovement();
@@ -88,13 +101,13 @@ public class PlayerMovement : MonoBehaviour
     public void ApplyMovement()
     {
         characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
-        anim.SetBool("Andando", andando);
     }
 
     public void Move(InputAction.CallbackContext context)
     {
         input = context.ReadValue<Vector2>();
         moveDirection = new Vector3(input.x, 0f, input.y);
+        anim.SetBool("Andar", andando = true);
     }
 
     public void Jump(InputAction.CallbackContext context)
