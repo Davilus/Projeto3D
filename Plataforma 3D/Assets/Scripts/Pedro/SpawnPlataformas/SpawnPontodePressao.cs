@@ -9,6 +9,9 @@ public class SpawnPontodePressao : MonoBehaviour
     private bool primeiroSpawn = true;
     [SerializeField] private BoxCollider col;
 
+    // Sound Effect
+    [SerializeField] AudioSource botaoPressionado;
+
     //Movimento Smooth Damp
     [SerializeField] float speed = 3;
     [SerializeField] float smoothTime = 0.5f;
@@ -21,8 +24,8 @@ public class SpawnPontodePressao : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Caixa Empurrável"))
         {
+            botaoPressionado.Play();
             spawnou = true;
-           
         }
     }
 
