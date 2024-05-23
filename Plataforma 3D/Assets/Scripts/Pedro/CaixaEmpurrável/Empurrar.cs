@@ -8,7 +8,9 @@ public class Empurrar : MonoBehaviour
     
     [SerializeField] Rigidbody cubo;
     [SerializeField] private float forca = 10;
-    //[SerializeField] Vector3 vector = new Vector3(3,0,0); 
+
+    //Sound Effects
+    [SerializeField] AudioSource empurrarCaixa;
     
 
     private void OnTriggerEnter(Collider collider)
@@ -19,7 +21,7 @@ public class Empurrar : MonoBehaviour
 
             //BoxCollider col = new BoxCollider();
             //col.transform.position = cubo.transform.position + vector;
-
+            empurrarCaixa.Play();
             cubo.AddForce(new Vector3(forca,0,0),ForceMode.Impulse);
             
             

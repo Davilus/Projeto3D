@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int enemyHealth;
     int damage = 1;
+    [SerializeField] AudioSource source;
 
     public void HurtEnemy()
     {
@@ -22,6 +23,7 @@ public class EnemyHealth : MonoBehaviour
             }
             else if (enemyHealth <= 0)
             {
+                source.Play();
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
             }
@@ -39,7 +41,8 @@ public class EnemyHealth : MonoBehaviour
             }
             else if (enemyHealth <= 0)
             {
-                 Destroy(gameObject);
+                source.Play();
+                Destroy(gameObject);
             }
                 
         }else if (collider.gameObject.CompareTag("Zona de Morte"))

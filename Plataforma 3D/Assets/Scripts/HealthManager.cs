@@ -124,6 +124,7 @@ public class HealthManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Zona de Morte"))
         {
+            currentHealth = 0;
             Respawn();
             Debug.Log("Colidiu");
         }

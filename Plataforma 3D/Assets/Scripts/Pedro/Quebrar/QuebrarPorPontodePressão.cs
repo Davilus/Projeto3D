@@ -10,6 +10,7 @@ public class QuebrarPorPontodePressão : MonoBehaviour
     //private bool primeiroSpawn = true;
     [SerializeField] private BoxCollider col;
 
+    [SerializeField] AudioSource botaoPressionado;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +24,7 @@ public class QuebrarPorPontodePressão : MonoBehaviour
     {
         if (quebrou)
         {
+            botaoPressionado.Play();    
             plataforma.SetActive(false);
         }
     }
