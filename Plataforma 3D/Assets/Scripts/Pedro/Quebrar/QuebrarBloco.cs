@@ -6,7 +6,9 @@ using UnityEngine;
 public class QuebrarBloco : MonoBehaviour 
 {
     private Rigidbody rb;
-    //[SerializeField] BoxCollider boxCollider;
+
+    //[SerializeField] AudioSource source;
+    //[SerializeField] private  AudioClip quebrarBlocos;
 
     [SerializeField] private GameObject blocoQuebrado;
     [SerializeField] private float exploxiveForce = 1000f;
@@ -115,8 +117,9 @@ public class QuebrarBloco : MonoBehaviour
             caixaVida -= danoSofrido;
             if (caixaVida == 0)
             {
-                Explosion();
                 
+                Explosion();
+                //source.PlayOneShot(quebrarBlocos);
             }
         }
     }

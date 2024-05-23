@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
     public int enemyHealth;
     int damage = 1;
+    [SerializeField] AudioSource source;
 
     public void HurtEnemy()
     {
@@ -15,8 +17,13 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "Gun")
         {
             enemyHealth -= damage;
-            if (enemyHealth <= 0)
+            if (gameObject.CompareTag("Pato"))
             {
+                SceneManager.LoadScene("Tela Final");
+            }
+            else if (enemyHealth <= 0)
+            {
+                source.Play();
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
             }
@@ -28,8 +35,13 @@ public class EnemyHealth : MonoBehaviour
         if (collider.gameObject.CompareTag("Gun"))
         {
             enemyHealth -= damage;
-            if(enemyHealth <= 0)
+            if (gameObject.CompareTag("Pato"))
             {
+                SceneManager.LoadScene("Tela Final");
+            }
+            else if (enemyHealth <= 0)
+            {
+                source.Play();
                 Destroy(gameObject);
             }
                 

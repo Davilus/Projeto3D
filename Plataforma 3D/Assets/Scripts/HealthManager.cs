@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
@@ -123,6 +124,7 @@ public class HealthManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Zona de Morte"))
         {
+            currentHealth = 0;
             Respawn();
             Debug.Log("Colidiu");
         }
