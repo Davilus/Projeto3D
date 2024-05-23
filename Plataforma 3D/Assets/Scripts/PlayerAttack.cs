@@ -22,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
         else
         {
             hitBox.SetActive(false);
+            attacking = false;
         }
     }
 

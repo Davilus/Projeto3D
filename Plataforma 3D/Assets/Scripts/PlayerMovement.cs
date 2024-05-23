@@ -8,10 +8,13 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController characterController;
+    public PlayerAttack attack;
     public Animator anim;
 
     private bool andando = false;
     private bool pulando = false;
+    private bool caindo = false;
+    private bool atacando = false;
 
     //Movimentação do personagem
     private Vector2 input;
@@ -58,14 +61,30 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if(velocity > -1f)
+        if (attack.attacking)
+        {
+            anim.SetBool("Atacar", atacando = true);
+            anim.SetBool("Cair", pulando = false);
+            anim.SetBool("Andar", andando = false);
+            anim.SetBool("Pulando", pulando = false);
+        }
+
+        if (velocity < -1f)
+        {
+            anim.SetBool("Cair", pulando = true);
+        }
+
+        else if(velocity > -1f)
         {
             anim.SetBool("Pulando", pulando = true);
             anim.SetBool("Andar", andando = false);
+            anim.SetBool("Atacar", atacando = false);
         }
 
-        else if (input.x == 0 && input.y == 0)
+        if (input.x == 0 && input.y == 0)
         {
+            anim.SetBool("Atacar", atacando = false);
+            anim.SetBool("Cair", pulando = false);
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Pulando", pulando = false);
         }
