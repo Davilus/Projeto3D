@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -15,7 +16,11 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "Gun")
         {
             enemyHealth -= damage;
-            if (enemyHealth <= 0)
+            if (gameObject.CompareTag("Pato"))
+            {
+                SceneManager.LoadScene("Tela Final");
+            }
+            else if (enemyHealth <= 0)
             {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
@@ -28,9 +33,13 @@ public class EnemyHealth : MonoBehaviour
         if (collider.gameObject.CompareTag("Gun"))
         {
             enemyHealth -= damage;
-            if(enemyHealth <= 0)
+            if (gameObject.CompareTag("Pato"))
             {
-                Destroy(gameObject);
+                SceneManager.LoadScene("Tela Final");
+            }
+            else if (enemyHealth <= 0)
+            {
+                 Destroy(gameObject);
             }
                 
         }else if (collider.gameObject.CompareTag("Zona de Morte"))
