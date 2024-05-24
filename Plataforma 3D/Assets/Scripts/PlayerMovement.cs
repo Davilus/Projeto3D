@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,8 +9,9 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController characterController;
-    public PlayerAttack attack;
     public Animator anim;
+
+    //[SerializeField] GameObject Mimir;
 
     private bool andando = false;
     private bool pulando = false;
@@ -25,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     //Gravidade
     private float gravity = -9.81f;
     [SerializeField] private float gravityMultiplier = 3f;
-    private float velocity;
+    public float velocity;
 
     //Rotacionar o personagem
     [SerializeField] private float smoothTime = 0.05f;
@@ -61,34 +63,56 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if (attack.attacking)
+        //if (!IsGrounded()&& !Input.GetMouseButtonDown(0) && velocity <0)
+        //{
+        //        anim.SetBool("Andar", andando = false);
+        //        anim.SetBool("Cair", caindo = true);
+        //        anim.SetBool("Pulando", pulando = false);
+        //        anim.SetBool("Atacar", atacando = false);
+        //}
+
+        if(velocity < 0f && !IsGrounded())
+        {
+            anim.SetBool("Atacar", atacando = false);
+            anim.SetBool("Cair", caindo = true);
+            anim.SetBool("Andar", andando = false);
+            anim.SetBool("Pulando", pulando = false);
+        }
+        if (Input.GetMouseButtonDown(0))
         {
             anim.SetBool("Atacar", atacando = true);
-            anim.SetBool("Cair", pulando = false);
+            anim.SetBool("Cair", caindo = false);
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Pulando", pulando = false);
         }
 
-        if (velocity < -1f)
+        if ((input.x != 0 || input.y != 0) && IsGrounded())
         {
-            anim.SetBool("Cair", pulando = true);
+            anim.SetBool("Andar", andando = true);
+            anim.SetBool("Cair", caindo = false);
+            anim.SetBool("Pulando", pulando = false);
+            anim.SetBool("Atacar", atacando = false);
         }
 
-        else if(velocity > -1f)
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
+            anim.SetBool("Cair", caindo = false);
             anim.SetBool("Pulando", pulando = true);
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Atacar", atacando = false);
-        }
 
-        if (input.x == 0 && input.y == 0)
+        }
+        else if (input.x == 0 && input.y == 0 && IsGrounded() && Input.GetMouseButtonDown(0) == false)
         {
             anim.SetBool("Atacar", atacando = false);
-            anim.SetBool("Cair", pulando = false);
+            anim.SetBool("Cair", caindo = false);
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Pulando", pulando = false);
         }
-
+        else if (IsGrounded())
+        {
+            anim.SetBool("Pulando", pulando = false);
+        }
         ApplyGravity();
         ApplyRotation();
         ApplyMovement();
@@ -126,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
     {
         input = context.ReadValue<Vector2>();
         moveDirection = new Vector3(input.x, 0f, input.y);
-        anim.SetBool("Andar", andando = true);
+        //anim.SetBool("Andar", andando = true);
     }
 
     public void Jump(InputAction.CallbackContext context)
