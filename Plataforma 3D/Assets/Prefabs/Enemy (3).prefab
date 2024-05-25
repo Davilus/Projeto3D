@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 1
+  source: {fileID: 0}
 --- !u!95 &5886083513787551567
 Animator:
   serializedVersion: 5
@@ -312,8 +313,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1740164, y: 1.2541355, z: 1.2}
-  m_Center: {x: -0.009780772, y: 0.060280327, z: -0.003436659}
+  m_Size: {x: 1.0256271, y: 0.99321264, z: 1.2}
+  m_Center: {x: 0.017704936, y: -0.070181236, z: -0.003436659}
 --- !u!1 &8515711504609631072
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b9add0ab2446046bcbe63411a5910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slime: {fileID: 0}
   enemy: {fileID: 270918219235199183}
   player: {fileID: 0}
   cool: {fileID: 0}
