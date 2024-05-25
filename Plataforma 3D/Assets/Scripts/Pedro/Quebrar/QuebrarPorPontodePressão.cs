@@ -17,6 +17,7 @@ public class QuebrarPorPontodePressão : MonoBehaviour
         if (other.gameObject.CompareTag("Caixa Empurrável"))
         {
             quebrou = true;
+            botaoPressionado.Play();
         }
     }
 
@@ -24,7 +25,6 @@ public class QuebrarPorPontodePressão : MonoBehaviour
     {
         if (quebrou)
         {
-            botaoPressionado.Play();    
             plataforma.SetActive(false);
         }
     }
