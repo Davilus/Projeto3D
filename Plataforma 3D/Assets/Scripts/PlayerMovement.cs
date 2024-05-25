@@ -70,14 +70,6 @@ public class PlayerMovement : MonoBehaviour
         //        anim.SetBool("Pulando", pulando = false);
         //        anim.SetBool("Atacar", atacando = false);
         //}
-
-        if(velocity < 0f && !IsGrounded())
-        {
-            anim.SetBool("Atacar", atacando = false);
-            anim.SetBool("Cair", caindo = true);
-            anim.SetBool("Andar", andando = false);
-            anim.SetBool("Pulando", pulando = false);
-        }
         if (Input.GetMouseButtonDown(0))
         {
             anim.SetBool("Atacar", atacando = true);
@@ -85,6 +77,15 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Pulando", pulando = false);
         }
+
+        if (velocity < 0f && !IsGrounded())
+        {
+            anim.SetBool("Atacar", atacando = false);
+            anim.SetBool("Cair", caindo = true);
+            anim.SetBool("Andar", andando = false);
+            anim.SetBool("Pulando", pulando = false);
+        }
+        
 
         if ((input.x != 0 || input.y != 0) && IsGrounded())
         {
