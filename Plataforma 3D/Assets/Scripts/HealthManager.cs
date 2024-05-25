@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
@@ -13,7 +14,6 @@ public class HealthManager : MonoBehaviour
 
     public Renderer playerRenderer1;
     public Renderer playerRenderer2;
-    public Renderer playerRenderer3;
     public float flashCounter;
     public float flashLength = 0.1f;
 
@@ -42,7 +42,6 @@ public class HealthManager : MonoBehaviour
             {
                 playerRenderer1.enabled = !playerRenderer1.enabled;
                 playerRenderer2.enabled = !playerRenderer2.enabled;
-                playerRenderer3.enabled = !playerRenderer3.enabled;
                 flashCounter = flashLength;
             }
 
@@ -50,7 +49,6 @@ public class HealthManager : MonoBehaviour
             {
                 playerRenderer1.enabled = true;
                 playerRenderer2.enabled = true;
-                playerRenderer3.enabled = true;
             }
         }
     }
@@ -74,7 +72,6 @@ public class HealthManager : MonoBehaviour
 
                 playerRenderer1.enabled = false;
                 playerRenderer2.enabled = false;
-                playerRenderer3.enabled = false;
 
                 flashCounter = flashLength;
             }
@@ -99,7 +96,6 @@ public class HealthManager : MonoBehaviour
         thePlayer.enabled = false;
         playerRenderer1.enabled = false;
         playerRenderer2.enabled = false;
-        playerRenderer3.enabled = false;
         charController.enabled = false;
 
         yield return new WaitForSeconds(respawnLength);
@@ -115,7 +111,6 @@ public class HealthManager : MonoBehaviour
 
         playerRenderer1.enabled = false;
         playerRenderer2.enabled = false;
-        playerRenderer3.enabled = false;
 
         flashCounter = flashLength;
     }
@@ -123,6 +118,7 @@ public class HealthManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Zona de Morte"))
         {
+            currentHealth = 0;
             Respawn();
             Debug.Log("Colidiu");
         }
