@@ -15,6 +15,7 @@ public class HealthManager : MonoBehaviour
     public Renderer playerRenderer1;
     public Renderer playerRenderer2;
     public Renderer playerRenderer3;
+    public Renderer playerRenderer4;
     public float flashCounter;
     public float flashLength = 0.1f;
 
@@ -44,6 +45,7 @@ public class HealthManager : MonoBehaviour
                 playerRenderer1.enabled = !playerRenderer1.enabled;
                 playerRenderer2.enabled = !playerRenderer2.enabled;
                 playerRenderer3.enabled = !playerRenderer3.enabled;
+                playerRenderer4.enabled = !playerRenderer4.enabled;
                 flashCounter = flashLength;
             }
 
@@ -52,6 +54,7 @@ public class HealthManager : MonoBehaviour
                 playerRenderer1.enabled = true;
                 playerRenderer2.enabled = true;
                 playerRenderer3.enabled = true;
+                playerRenderer4.enabled = true;
             }
         }
     }
@@ -76,6 +79,7 @@ public class HealthManager : MonoBehaviour
                 playerRenderer1.enabled = false;
                 playerRenderer2.enabled = false;
                 playerRenderer3.enabled = false;
+                playerRenderer4.enabled = false;
 
                 flashCounter = flashLength;
             }
@@ -101,6 +105,7 @@ public class HealthManager : MonoBehaviour
         playerRenderer1.enabled = false;
         playerRenderer2.enabled = false;
         playerRenderer3.enabled = false;
+        playerRenderer4.enabled = false;
         charController.enabled = false;
 
         yield return new WaitForSeconds(respawnLength);
@@ -117,6 +122,7 @@ public class HealthManager : MonoBehaviour
         playerRenderer1.enabled = false;
         playerRenderer2.enabled = false;
         playerRenderer3.enabled = false;
+        playerRenderer4.enabled = false;
 
         flashCounter = flashLength;
     }
