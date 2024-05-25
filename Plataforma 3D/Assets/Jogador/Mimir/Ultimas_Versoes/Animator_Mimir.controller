@@ -687,9 +687,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Atacar
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Andar
-    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5613212322278406710}
   m_Solo: 0
@@ -768,9 +765,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: Atacar
     m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: Andar
-    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8056518982850774793}
   m_Solo: 0
