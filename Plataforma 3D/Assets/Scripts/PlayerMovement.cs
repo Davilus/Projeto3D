@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
 
-        if ((input.x != 0 || input.y != 0) && IsGrounded())
+        if ((input.x != 0 || input.y != 0) && IsGrounded() && Input.GetMouseButtonDown(0) == false)
         {
             anim.SetBool("Andar", andando = true);
             anim.SetBool("Cair", caindo = false);
