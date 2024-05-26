@@ -1067,7 +1067,7 @@ MonoBehaviour:
   amplitudeY: 1.15
   amplitudeZ: 3
   frequenciaX: 0
-  frequenciaY: 0.5
+  frequenciaY: 1
   frequenciaZ: 1
 --- !u!4 &289154047 stripped
 Transform:
@@ -6319,6 +6319,10 @@ PrefabInstance:
     - target: {fileID: 751992684954417632, guid: 2dcb8ee299e64974e9ce888d4a07fb69, type: 3}
       propertyPath: m_Name
       value: Cubo_quebravel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072389563760268424, guid: 2dcb8ee299e64974e9ce888d4a07fb69, type: 3}
+      propertyPath: caixaEmpilhada
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

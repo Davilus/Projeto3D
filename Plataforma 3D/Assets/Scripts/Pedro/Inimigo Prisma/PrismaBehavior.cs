@@ -26,7 +26,7 @@ public class PrismaBehavior : MonoBehaviour
     void Update()
     {
         x = Mathf.Sin(Time.time * frequenciaX) * amplitudeX;
-        y = Mathf.Sin(Time.time * frequenciaY) * amplitudeY;
+        y = Mathf.Cos(Time.time * frequenciaY) * amplitudeY;
         z = Mathf.Cos(Time.time * frequenciaZ) * amplitudeZ;
 
         transform.localPosition = new Vector3(x,y,z);
