@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int enemyHealth;
+    public int enemyHealth = 1;
     int damage = 1;
     [SerializeField] AudioSource source;
 

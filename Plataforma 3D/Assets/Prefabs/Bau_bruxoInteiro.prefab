@@ -84,6 +84,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6326887603145473670}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5606750985992572720}
   m_SourcePrefab: {fileID: 100100000, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
 --- !u!1 &5437208596971130576 stripped
 GameObject:
@@ -181,3 +184,17 @@ MonoBehaviour:
   caixaEmpilhada: 0
   caixaVida: 1
   danoSofrido: 1
+--- !u!114 &5606750985992572720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437208596971130576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b96e34ed39d08b34287e60e815450f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 1
+  source: {fileID: 0}
