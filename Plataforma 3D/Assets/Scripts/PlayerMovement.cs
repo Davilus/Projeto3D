@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool pulando = false;
     private bool caindo = false;
     private bool atacando = false;
+    private bool tomandoDano = false;
 
     //Movimentação do personagem
     private Vector2 input;
@@ -53,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+
         if (IsGrounded() && velocity < 0f)
         {
 
