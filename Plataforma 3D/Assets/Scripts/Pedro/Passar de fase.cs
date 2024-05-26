@@ -11,6 +11,7 @@ public class Passardefase : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Invoke("blablabla", 1f);
             SceneManager.LoadScene(scenename);
         }
     }
