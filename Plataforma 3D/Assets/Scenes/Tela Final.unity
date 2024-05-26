@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -182,8 +182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Jogo Completo! \nO Mago Pato foi derrotado!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d8d0d019a2bc974b9aee81bb1b30d89, type: 2}
+  m_sharedMaterial: {fileID: -2569445392756841317, guid: 6d8d0d019a2bc974b9aee81bb1b30d89, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -477,14 +477,14 @@ RectTransform:
   m_GameObject: {fileID: 1073112573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.40395266, y: 0.26881787, z: 0.40395266}
+  m_LocalScale: {x: 0.3539716, y: 0.23555703, z: 0.3539716}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1285339326}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -45.6, y: 12.648134}
+  m_AnchoredPosition: {x: -40.9, y: 11.9}
   m_SizeDelta: {x: 0.6068392, y: 0.7037325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073112575
@@ -509,8 +509,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Voltar ao menu principal
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6d8d0d019a2bc974b9aee81bb1b30d89, type: 2}
+  m_sharedMaterial: {fileID: -2569445392756841317, guid: 6d8d0d019a2bc974b9aee81bb1b30d89, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -612,7 +612,7 @@ RectTransform:
   m_GameObject: {fileID: 1285339325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.547738, y: 2.3257859, z: 1.547738}
+  m_LocalScale: {x: 3.095476, y: 4.6515718, z: 3.095476}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1073112574}
@@ -620,7 +620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 422, y: -164}
+  m_AnchoredPosition: {x: 638, y: -412.56415}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285339327
