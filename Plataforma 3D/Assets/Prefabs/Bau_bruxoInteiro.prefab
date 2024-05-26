@@ -48,9 +48,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7590345388367381805, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6501056981866463730, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
       propertyPath: m_Name
       value: Bau_bruxoInteiro
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6466644338932239254, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -59,5 +71,113 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2354465118882916197}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 661989105530771504}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9039751703472425737}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6326887603145473670}
   m_SourcePrefab: {fileID: 100100000, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+--- !u!1 &5437208596971130576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1dd6e9d4dc7cc3f458cf57dba5a51c57, type: 3}
+  m_PrefabInstance: {fileID: 5167231554332078977}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2354465118882916197
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437208596971130576}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!65 &661989105530771504
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437208596971130576}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1365948, y: 1.036103, z: 1.96}
+  m_Center: {x: -1.495595, y: -0.7669486, z: 0}
+--- !u!54 &9039751703472425737
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437208596971130576}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &6326887603145473670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437208596971130576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d0de024f285bb418883928b6bc4a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blocoQuebrado: {fileID: 5802464516249487361, guid: 085395b40cd1cc944a9ad452f08b97d1, type: 3}
+  exploxiveForce: 300
+  exploxciveRadius: 2
+  pieceFadeSpeed: 0.75
+  pieceDestroyDelay: 1
+  pieceSleepCheckDelay: 0.5
+  caixaEmpilhada: 0
+  caixaVida: 1
+  danoSofrido: 1

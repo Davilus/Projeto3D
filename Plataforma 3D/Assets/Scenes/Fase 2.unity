@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 103528937}
   - component: {fileID: 103528936}
   - component: {fileID: 103528935}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 2VCube.001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2894,6 +2894,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -33.88714
       objectReference: {fileID: 0}
+    - target: {fileID: -2226779723023885568, guid: 6fce0fccf000569488b9417aca570205, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -1908179966367579907, guid: 6fce0fccf000569488b9417aca570205, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.1
@@ -2909,6 +2913,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6fce0fccf000569488b9417aca570205, type: 3}
       propertyPath: m_Name
       value: Fase 2 Piso
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6fce0fccf000569488b9417aca570205, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1951609068247034790, guid: 6fce0fccf000569488b9417aca570205, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2934,6 +2942,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8360c73e14ace2743b089ba13e243540, type: 2}
+    - target: {fileID: 5607126629858069693, guid: 6fce0fccf000569488b9417aca570205, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6064379493280373566, guid: 6fce0fccf000569488b9417aca570205, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -4873,6 +4885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cubo_quebravel (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1256329666605209653, guid: 2dcb8ee299e64974e9ce888d4a07fb69, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c2b2d5b5fcf1de4f81c8b2185e845ea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -6320,6 +6336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cubo_quebravel
       objectReference: {fileID: 0}
+    - target: {fileID: 1256329666605209653, guid: 2dcb8ee299e64974e9ce888d4a07fb69, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c2b2d5b5fcf1de4f81c8b2185e845ea, type: 2}
     - target: {fileID: 6072389563760268424, guid: 2dcb8ee299e64974e9ce888d4a07fb69, type: 3}
       propertyPath: caixaEmpilhada
       value: 0
@@ -6812,7 +6832,7 @@ GameObject:
   - component: {fileID: 6011614241143679749}
   - component: {fileID: 3563017313310188711}
   - component: {fileID: 7905089737263492455}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 2VCube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6827,6 +6847,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 877832830977733598, guid: b78910f1a7c0b5e44958ae5fd28455cd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 877832830977733598, guid: b78910f1a7c0b5e44958ae5fd28455cd, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -6996,7 +7020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8028961544944235082}
   - component: {fileID: 3747543889525208004}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlataformaSpawn (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
