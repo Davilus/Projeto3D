@@ -5368,7 +5368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &3747543888088172586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5617,6 +5617,10 @@ PrefabInstance:
       propertyPath: plataforma
       value: 
       objectReference: {fileID: 623462954}
+    - target: {fileID: 4357648222947834994, guid: 21bd1c9cab3ff624c88ea5f385806780, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5527873225573895022, guid: 21bd1c9cab3ff624c88ea5f385806780, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.26
@@ -5713,7 +5717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &9189862955161278357
 GameObject:
   m_ObjectHideFlags: 0
