@@ -9,8 +9,8 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        Invoke("Fase 1", 2f);
-        SceneManager.LoadScene("Fase 1");
+        //Invoke("Fase 1", 2f);
+        SceneManager.LoadScene("Vídeo");
     }
 
     public void QuitGame()
