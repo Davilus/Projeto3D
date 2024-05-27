@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
+using UnityEngine.SceneManagement;
 
 public class QuebrarBloco : MonoBehaviour 
 {
     private Rigidbody rb;
 
-    //[SerializeField] AudioSource source;
-    //[SerializeField] private  AudioClip quebrarBlocos;
+    
 
     [SerializeField] private GameObject blocoQuebrado;
     [SerializeField] private float exploxiveForce = 1000f;
@@ -108,6 +109,24 @@ public class QuebrarBloco : MonoBehaviour
         return rigidbodies.GetComponent<Renderer>();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Gun")
+        {
+            caixaVida -= danoSofrido;
+            if (gameObject.CompareTag("Pato"))
+            {
+                SceneManager.LoadScene("Tela Final");
+            }
+            else if (caixaVida <= 0)
+            {
+                Explosion();
+                
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider collider)
     {
