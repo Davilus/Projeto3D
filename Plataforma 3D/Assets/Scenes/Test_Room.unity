@@ -5455,6 +5455,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3102259532738717339, guid: b33395231e3a4d04498aa975f76b418d, type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3246826932261829879, guid: b33395231e3a4d04498aa975f76b418d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

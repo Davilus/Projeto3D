@@ -121,7 +121,7 @@ public class QuebrarBloco : MonoBehaviour
             else if (caixaVida <= 0)
             {
                 Explosion();
-                //source.Play();
+                
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
             }

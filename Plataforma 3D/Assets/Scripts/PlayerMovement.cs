@@ -77,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Cair", caindo = false);
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Pulando", pulando = false);
+            anim.SetBool("ReceberDano", tomandoDano = false);
         }
 
         if (velocity < 0f && !IsGrounded())
@@ -85,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Cair", caindo = true);
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Pulando", pulando = false);
+            anim.SetBool("ReceberDano", tomandoDano = false);
         }
         
 
@@ -94,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Cair", caindo = false);
             anim.SetBool("Pulando", pulando = false);
             anim.SetBool("Atacar", atacando = false);
+            anim.SetBool("ReceberDano", tomandoDano = false);
         }
 
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
@@ -102,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Pulando", pulando = true);
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Atacar", atacando = false);
+            anim.SetBool("ReceberDano", tomandoDano = false);
 
         }
         else if (input.x == 0 && input.y == 0 && IsGrounded() && Input.GetMouseButtonDown(0) == false)
@@ -110,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("Cair", caindo = false);
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Pulando", pulando = false);
+            anim.SetBool("ReceberDano", tomandoDano = false);
         }
         else if (IsGrounded())
         {
@@ -169,10 +174,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void Knockback(Vector3 direction)
     {
-        //knockbackCounter = knockbackTime;
-
-        //moveDirection = direction * knockbackForce;
-
+        anim.SetBool("ReceberDano", tomandoDano = true);
+        anim.SetBool("Cair", caindo = false);
+        anim.SetBool("Pulando", pulando = false);
+        anim.SetBool("Andar", andando = false);
+        anim.SetBool("Atacar", atacando = false);
+        
         velocity += knockbackForce;
         sofrerDano.Play();
     }
