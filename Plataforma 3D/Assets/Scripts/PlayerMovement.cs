@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController characterController;
     public Animator anim;
 
+    //Sound Effects
+    [SerializeField] AudioSource pulo;
+    [SerializeField] AudioSource attack;
+    [SerializeField] AudioSource sofrerDano;
+
     //[SerializeField] GameObject Mimir;
 
     private bool andando = false;
@@ -65,16 +70,10 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        //if (!IsGrounded()&& !Input.GetMouseButtonDown(0) && velocity <0)
-        //{
-        //        anim.SetBool("Andar", andando = false);
-        //        anim.SetBool("Cair", caindo = true);
-        //        anim.SetBool("Pulando", pulando = false);
-        //        anim.SetBool("Atacar", atacando = false);
-        //}
         if (Input.GetMouseButtonDown(0))
         {
             anim.SetBool("Atacar", atacando = true);
+            attack.Play();
             anim.SetBool("Cair", caindo = false);
             anim.SetBool("Andar", andando = false);
             anim.SetBool("Pulando", pulando = false);
@@ -160,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!context.started) return;
         if (!IsGrounded() && coyoteTimeCounter < 0) return;
-        
+        pulo.Play();
         
         velocity += jumpPower;
         coyoteTimeCounter = 0f;
@@ -175,5 +174,6 @@ public class PlayerMovement : MonoBehaviour
         //moveDirection = direction * knockbackForce;
 
         velocity += knockbackForce;
+        sofrerDano.Play();
     }
 }

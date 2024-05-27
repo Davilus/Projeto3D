@@ -37,7 +37,9 @@ public class EnemyHealth : MonoBehaviour
             enemyHealth -= damage;
             if (gameObject.CompareTag("Pato"))
             {
-                SceneManager.LoadScene("Tela Final");
+                source.Play();
+                
+                Destroy(gameObject);
             }
             else if (enemyHealth <= 0)
             {
@@ -50,7 +52,7 @@ public class EnemyHealth : MonoBehaviour
             enemyHealth -= damage;
             Destroy(gameObject);
         }
-
-        
     }
+
+   
 }
