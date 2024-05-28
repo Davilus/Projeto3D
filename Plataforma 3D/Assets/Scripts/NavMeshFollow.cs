@@ -22,6 +22,7 @@ public class NavMeshFollow : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
            perseguir=true;
+           slime.SetBool("Andando", perseguir);
         }
     }
     void Update()
@@ -31,6 +32,6 @@ public class NavMeshFollow : MonoBehaviour
         {
             enemy.SetDestination(player.position);
         }
-        //slime.SetBool("Andando", perseguir);
+        
     }
 }
