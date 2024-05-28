@@ -9,9 +9,7 @@ public class EnemyHealth : MonoBehaviour
     int damage = 1;
     [SerializeField] AudioSource source;
 
-    public void HurtEnemy()
-    {
-    }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Gun")

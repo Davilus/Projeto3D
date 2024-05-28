@@ -460,6 +460,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 754131098150123028, guid: 36d898e4936e55344aa0880a7fbe10ac, type: 3}
   m_PrefabInstance: {fileID: 34749425}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &35527790 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 884234772852119645, guid: f488d23c66681724b9d178f1d7646024, type: 3}
+  m_PrefabInstance: {fileID: 342868592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &39933017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1954,6 +1959,10 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8749188882033368722, guid: f488d23c66681724b9d178f1d7646024, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 438208445}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1962,11 +1971,6 @@ PrefabInstance:
 --- !u!195 &342868593 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 8393954631613789271, guid: f488d23c66681724b9d178f1d7646024, type: 3}
-  m_PrefabInstance: {fileID: 342868592}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &342868594 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1598812614330545793, guid: f488d23c66681724b9d178f1d7646024, type: 3}
   m_PrefabInstance: {fileID: 342868592}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &362612287
@@ -3150,6 +3154,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3ae6dc43580f746a625d82d78570a3, type: 3}
+--- !u!95 &486248292 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 884234772852119645, guid: f488d23c66681724b9d178f1d7646024, type: 3}
+  m_PrefabInstance: {fileID: 1671745050}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &501649483
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -6420,7 +6429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b9add0ab2446046bcbe63411a5910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slime: {fileID: 1671745052}
+  slime: {fileID: 35527790}
   enemy: {fileID: 1671745051}
   player: {fileID: 1517338179}
   cool: {fileID: 1334763353}
@@ -6436,7 +6445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b9add0ab2446046bcbe63411a5910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slime: {fileID: 342868594}
+  slime: {fileID: 486248292}
   enemy: {fileID: 342868593}
   player: {fileID: 1517338179}
   cool: {fileID: 1334763353}
@@ -8255,6 +8264,10 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8749188882033368722, guid: f488d23c66681724b9d178f1d7646024, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 438208445}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8263,11 +8276,6 @@ PrefabInstance:
 --- !u!195 &1671745051 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 8393954631613789271, guid: f488d23c66681724b9d178f1d7646024, type: 3}
-  m_PrefabInstance: {fileID: 1671745050}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1671745052 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1598812614330545793, guid: f488d23c66681724b9d178f1d7646024, type: 3}
   m_PrefabInstance: {fileID: 1671745050}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1692369850
