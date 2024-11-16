@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: a5af52af01f7acc49ae42c9840759af3
   m_currentHash:
     serializedVersion: 2
-    Hash: f477c4ffcdb8eb98703966303a44bb7e
+    Hash: 785d8c68b3e8b16cf553522764e9a938
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -47,8 +47,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 785b7c46b534bdc429aafb668cebc980, type: 2}
   - {fileID: 11400000, guid: f4f69718b435f4c40bf46c0627e92f7d, type: 2}
   - {fileID: 11400000, guid: b8fe04d7a566f7247bebeca0faec4a46, type: 2}
-  - {fileID: 11400000, guid: 502e6814fbb16b34bad3e97d24172ef2, type: 2}
-  - {fileID: 11400000, guid: 8386fad8cb7f4ce44aa4790f56b54f86, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -83,7 +81,7 @@ MonoBehaviour:
       - m_Id: d364cbf07f174d444a67a9cc831eba9f
         m_Value: ServerData/[BuildTarget]
       - m_Id: e1e25bcc65745ce48b0b4631775cf339
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://raw.githubusercontent.com/PedroAONeves/GrupoAddressables/refs/heads/main/
     m_ProfileEntryNames:
     - m_Id: 9cc76e68d348fda4da7b3966ad901176
       m_Name: BuildTarget
