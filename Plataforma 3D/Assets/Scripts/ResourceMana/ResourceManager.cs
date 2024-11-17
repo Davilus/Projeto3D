@@ -8,14 +8,13 @@ public class ResourceManager : MonoBehaviour
 {
     public AssetReference assetReference;
     AsyncOperationHandle<GameObject> handle;
-    List<GameObject> prefabs = new List<GameObject> ();
+    List<GameObject> prefabs = new List<GameObject>();
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
             if (prefabs.Count <= 0) LoadAsset();
-            Debug.Log("Oi");
         }
     }
 
@@ -23,7 +22,7 @@ public class ResourceManager : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            if (prefabs.Count > 0) UnloadAsset();
+            if (prefabs.Count > 0) UnLoadAsset();
         }
     }
 
@@ -33,9 +32,9 @@ public class ResourceManager : MonoBehaviour
         handle.Completed += handle => { prefabs.Add(handle.Result); };
     }
 
-    void UnloadAsset()
+    void UnLoadAsset()
     {
-        foreach(GameObject prefab in prefabs)
+        foreach (GameObject prefab in prefabs) 
         {
             Addressables.ReleaseInstance(prefab);
         }
